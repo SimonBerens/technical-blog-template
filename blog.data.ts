@@ -12,12 +12,20 @@ interface Post {
 declare const data: Post[]
 export { data }
 
-export default createContentLoader('blog/*.md', {
+function removeIndexHtmlFromUrl(url) {
+    const badSuffix = "/index.html"
+    if (url.endsWith(badSuffix)) {
+        return url.slice(0, -badSuffix.length) + "/";
+    }
+    return url;
+}
+
+export default createContentLoader('blog/*/index.md', {
     transform(raw): Post[] {
         return raw
             .map(({ url, frontmatter }) => ({
                 title: frontmatter.title,
-                url,
+                url: removeIndexHtmlFromUrl(url),
                 date: formatDate(frontmatter.date)
             }))
             .sort((a, b) => b.date.time - a.date.time)

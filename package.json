@@ -1,10 +1,13 @@
 {
   "devDependencies": {
     "@mdit/plugin-katex": "^0.4.8",
+    "@types/node": "^20.3.1",
+    "ts-node": "^10.9.1",
     "vitepress": "1.0.0-beta.3",
     "vue": "^3.3.4"
   },
   "scripts": {
+    "new": "ts-node ./bin/new.ts",
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
