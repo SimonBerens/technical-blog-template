@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { katex } from '@mdit/plugin-katex';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -24,5 +25,15 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
+  },
+
+  head: [[
+    'link',
+    {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css', integrity: 'sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI', crossorigin: 'anonymous'}
+  ]],
+  markdown: {
+    config: md => {
+      md.use(katex)
+    }
   }
 })

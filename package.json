@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@mdit/plugin-katex": "^0.4.8",
     "vitepress": "1.0.0-beta.3",
     "vue": "^3.3.4"
   },
