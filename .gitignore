@@ -1,2 +1,7 @@
 technical-blog-template.iml
 .idea
+
+node_modules
+
+.vitepress/cache
+.vitepress/dist
