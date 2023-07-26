@@ -1,5 +1,5 @@
 # Technical Blog Template
-This is a technical blog template inspired by [my blog post](https://simonberens.dev). It uses
+This is a technical blog template inspired by [my blog post](https://simonberens.dev/blog/starting-a-technical-blog-in-2023/). It uses
 [Vitepress](https://vitepress.dev) for default styling as well as the static site generation pipeline.
 
 ## Out of the box features
